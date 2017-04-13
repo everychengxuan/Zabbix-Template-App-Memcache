@@ -87,4 +87,7 @@ shell> zabbix_get -s 10.66.1.52 -k zabbix_low_discovery[memcache]
 shell> zabbix_get -s 10.66.1.52 -k memcached_stats[11211,pid]
 301
 ```
-5. 模板下载
+
+---
+## 5. 模板下载
+> Template_App_Memcached_Service_Chinese.xml
