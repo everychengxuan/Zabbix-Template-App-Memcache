@@ -66,7 +66,7 @@ shell> /etc/init.d/zabbix_agentd restart
 ---
 ## 3. 导入模板
 
-![Image-Zabbix-Template-App-Memcache-2.png](https://github.com/everychengxuan/Zabbix-Template-App-Memcache/blob/master/Image-Zabbix-Template-App-Memcache-2.png
+![Image-Zabbix-Template-App-Memcache-2.png](https://github.com/everychengxuan/Zabbix-Template-App-Memcache/blob/master/Image-Zabbix-Template-App-Memcache-2.png)
 
 导入模板Template_App_Memcached_Service_Chinese.xml, 并配置正则表达式: 
             名称: Memcache rege
