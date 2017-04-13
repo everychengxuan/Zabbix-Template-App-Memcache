@@ -53,7 +53,7 @@ shell> sed -i 's/^Defaults.*.requiretty/#Defaults    requiretty/'/etc/sudoer
 
 修改zabbix_agentd.conf配置文件, 增加以下内容:
 ```sh
-shell> vi /usr/local/etc/zabbix_agent.com
+shell> vi /usr/local/etc/zabbix_agent.conf
 UserParameter=memcached_stats[*],(echo stats; sleep 0.1) | telnet 127.0.0.1 $1 2>&1 | awk '/STAT $2 / {print $NF}'
 UserParameter=zabbix_low_discovery[*],/bin/bash /usr/local/zabbix/bin/memcache_low_discovery.sh $1
 ```
