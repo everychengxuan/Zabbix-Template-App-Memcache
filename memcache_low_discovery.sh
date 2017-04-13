@@ -1,5 +1,5 @@
 #!/bin/bash
-#Fucation:Memcache_Zabbix_Discovery
+#Fucation:memcache_low_discovery
 memcache() {
             port=($(sudo netstat -tpln | awk -F "[ :]+" '/[m]emcached/ && /0.0.0.0/ {print $5}'))
             printf '{\n'
