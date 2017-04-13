@@ -69,24 +69,24 @@ shell> /etc/init.d/zabbix_agentd restart
 ![Image-Zabbix-Template-App-Memcache-2.png](https://github.com/everychengxuan/Zabbix-Template-App-Memcache/blob/master/Image-Zabbix-Template-App-Memcache-2.png)
 
 导入模板Template_App_Memcached_Service_Chinese.xml, 并配置正则表达式: 
-            名称: Memcache rege
-            表达式类型: 结果为真 
-            表达式: ^(11211|11212)$ 
-            解释: 获取的值如若是匹配11211|11212, 则匹配关系成立, 结果为真, 如果还有其他实例11213,11214, 则表达式为:^(11211|11212|11213|11214)$, 根据个人环境, 依次类推!
+> 名称: Memcache rege
+表达式类型: 结果为真 
+表达式: ^(11211|11212)$ 
+解释: 获取的值如若是匹配11211|11212, 则匹配关系成立, 结果为真, 如果还有其他实例11213,11214, 则表达式为:^(11211|11212|11213|11214)$, 根据个人环境, 依次类推!
 
 ---
 ## 4. 测试数据获取
 
 主机关联模版, 默认数据为3600s后自动更新, 并在Zabbix服务器端测试获取数据
 ```sh
-shell> zabbix_get -s 10.66.1.52 -k zabbix_low_discovery[memcache]
+shell> zabbix_get -s xxx.xxx.xxx.xxx -k zabbix_low_discovery[memcache]
 {
 "data":[
  {
 "{#MEMPORT}":"11211"}
  ]
 }
-shell> zabbix_get -s 10.66.1.52 -k memcached_stats[11211,pid]
+shell> zabbix_get -s xxx.xxx.xxx.xxx -k memcached_stats[11211,pid]
 301
 ```
 
