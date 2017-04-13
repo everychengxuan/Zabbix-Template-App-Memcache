@@ -1,4 +1,4 @@
-# 1. Zabbix-Template-Memcache
+# 1. Zabbix-Template-App-Memcache
 
 >环境描述: 由于Memcached在大型应用中, 通常存在多个实例, 在本环境中, 一共存在两个实例(11211,11212), 如果采用固定端口进行监控, 监控模版会很不灵活, 那么就需要lld自动发现来监控.
 
